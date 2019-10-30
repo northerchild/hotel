@@ -1,0 +1,16 @@
+<h1>Hoteles <small>al rededor del mundo</small></h1>
+<hr>
+
+<div class="card-columns">
+    <div class="card animated fadeIn fast" *ngFor="let hotel of hoteles; let i = index">
+        <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{hotel.name}}</h5>
+            <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i> {{hotel.price}}</p>
+            <p class="card-text">Estrellas: {{hotel.stars}} <i class="fa fa-star" aria-hidden="true"></i></p>
+            <span class="badge badge-primary">{{hotel.amenities[0]}}</span>
+            <button class="btn btn-outline-primary btn-block" [routerLink]="['/hotel',i]">Ver Más</button>
+        </div>
+    </div>
+
+</div>

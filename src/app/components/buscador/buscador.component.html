@@ -1,0 +1,24 @@
+<h1>Buscador <small>{{termino}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="hoteles.length == 0">
+    <div class="col.md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el término: {{termino}}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+    <div class="card animated fadeIn fast" *ngFor="let hotel of hoteles; let i = index">
+        <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{hotel.name}}</h5>
+            <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i> {{hotel.price}}</p>
+            <p class="card-text">Estrellas: {{hotel.stars}} <i class="fa fa-star" aria-hidden="true"></i></p>
+            <span class="badge badge-primary mb-3">{{hotel.amenities[0]}}</span>
+            <button (click)="verHotel(i)" class="btn btn-outline-primary btn-block">Var Más</button>
+        </div>
+    </div>
+
+</div>

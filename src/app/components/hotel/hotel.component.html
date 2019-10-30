@@ -1,0 +1,15 @@
+<h1 class="animated fadeIn">{{hotel.name}}</h1>
+<hr>
+<div class="row fadeIn fast">
+    <div class="col-md-4">
+        <img src="https://picsum.photos/seed/picsum/200/200" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['/hoteles']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3><i class="fa fa-usd" aria-hidden="true"></i> {{hotel.price}}</h3>
+        <hr>
+        <p>Estrellas: {{hotel.stars}} <i class="fa fa-star" aria-hidden="true"></i></p>
+        <span class="badge badge-primary">{{hotel.amenities[0]}}</span>
+    </div>
+</div>
